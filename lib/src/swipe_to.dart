@@ -1,7 +1,6 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
-import 'package:swipe_to/src/custom_pan.dart';
 
 /// SwipeTo is a wrapper widget to other Widget that we can swipe horizontally
 /// to initiate a callback when animation gets end.
@@ -164,8 +163,8 @@ class _SwipeToState extends State<SwipeTo> with SingleTickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    return PanGestureDetector(
-      touchSlop: 0,
+    return GestureDetector(
+      excludeFromSemantics: true,
       onPanUpdate: (details) {
         if (details.delta.dx > 10 && widget.onRightSwipe != null) {
           _runAnimation(onRight: true, details: details);

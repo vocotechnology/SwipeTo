@@ -47,11 +47,9 @@ class _AppHomeState extends State<AppHome> {
           horizontal: 16.0,
           vertical: 8.0,
         ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
+        child: ListView(
+          physics: const AlwaysScrollableScrollPhysics(),
           children: <Widget>[
-            ///SwipeToRight Example
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -69,8 +67,6 @@ class _AppHomeState extends State<AppHome> {
                 ),
               ],
             ),
-
-            ///SwipeToLeft Example
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.end,
@@ -88,8 +84,6 @@ class _AppHomeState extends State<AppHome> {
                 ),
               ],
             ),
-
-            ///SwipeToRight & SwipeToLeft Example
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.end,
